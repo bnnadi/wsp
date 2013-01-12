@@ -61,8 +61,10 @@
 				</ul>
 				
 					<form id="searchbox" method="get" action="http://..." >
+                     <fieldset>
 						<input type= "search"  name="q" placeholder= "Search Nadic..."/>
 						<input type="submit" value="Search" title="Search"/>
+                     </fieldset>
 					</form>
 				
 			</nav>
@@ -80,27 +82,27 @@
 			
 					<input type="checkbox" name="internship" value="no">No<br />
 		
-					<label>First Name:</label>  
-					<input type="text" name="FirstName" placeholder="first">
+					<label for="for">First Name:</label>  
+					<input type="text" name="first" placeholder="first">
 					<div class="clear"></div>
-					<label>Last Name:</label>  
-					<input type="text" name="LastName" placeholder="last">
+					<label for="last">Last Name:</label>  
+					<input type="text" name="last" placeholder="last">
 					<div class="clear"></div>
 			
 					<input type="radio" name="sex" value="male">Male<br />
 			
-					<input type="radio" name="sex" value="male">Female<br />
+					<input type="radio" name="sex" value="female">Female<br />
 			
-					<label>Phone:</label>
-					<input name="Phone" type="text" id="phone" placeholder="(XXX)XXX-XXXX" />
+					<label for="phone">Phone:</label>
+					<input name="phone" type="text" id="phone" placeholder="(XXX)XXX-XXXX" />
 					<div class="clear"></div>
 					
-					<label>Email:</label>
-					<input name="Email" type="text" id="email" placeholder="yourmail@yourmail.com" />
+					<label for="email">Email:</label>
+					<input name="email" type="text" id="email" placeholder="yourmail@yourmail.com" />
 					<div class="clear"></div>
 					
-			  		<label>Address:</label>
-					<input name="Address" type="text" id="address" placeholder="1234 Address St." />
+			  		<label for="address">Address:</label>
+					<input name="address" type="text" id="address" placeholder="1234 Address St." />
 					<div class="clear"></div>	
   					
   					 <label>Country:</label>
@@ -412,22 +414,10 @@
 				<!-- Well add an upload option so user can upload their resume if needed -->
 					<fieldset>
                         <label id="uploadedFile_label" for="uploadedFile">
-                            <strong id="uploadedFile_labelText">
-                                "
-
-
-                                                                Select a resume
-                                                            "
-                            </strong>
+                            <strong id="uploadedFile_labelText">Select a resume</strong>
                             <input type="file" name="uploadedFile" class="uploadedFile">
                             <span id="uploadedFile_message"></span>
-                            <span>
-                            "
-
-"
-                                                                            (.doc,.docx,.pdf,.rtf, or .txt, 500KB or smaller.)
-                                                                        "
-                            </span>
+                            <span>(.doc,.docx,.pdf,.rtf, or .txt, 500KB or smaller.) </span>
                         </label>
                     </fieldset>
 
