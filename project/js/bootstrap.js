@@ -158,6 +158,7 @@
     .on('click.dropdown.data-api touchstart.dropdown.data-api'  , toggle, Dropdown.prototype.toggle)
     .on('keydown.dropdown.data-api touchstart.dropdown.data-api', toggle + ', [role=menu]' , Dropdown.prototype.keydown)
 
+
 }(window.jQuery);
 /* ==========================================================
  * bootstrap-carousel.js v2.2.2

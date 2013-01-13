@@ -76,10 +76,10 @@
                               </ul>
                               
                                     <form class="navbar-search pull-right" method="get" action="http://..." >
-                           <fieldset>
+                                     <fieldset>
                                           <input type= "text" class="search-query" name="q" placeholder= "Search Nadic..."/>
-                                          <input type="submit" value="Search" title="Search"/>
-                           </fieldset>
+                                          <i class="icon-search"></i>
+                                     </fieldset>
                                     </form>
                               
                               </nav><!-- nav-->
@@ -88,29 +88,36 @@
                   </div>
                   </div>
 
-			<article>
+                  <div class="row-fluid">
+			<article class="span8 offset4">
 				<!-- Well put slideshow of pictures first, then will add What new info and images of company certifcations -->
 				<h3>Application form</h3>
 				
-				<form action="#" class="application" method="get">
+				<form action="#" class="form-horizontal" method="get">
 				 <fieldset>
 					<legend>please fill out this application form with the correct information, and sumbut.</legend>
 			
-					<p>Are you applying for an internship?</p>			
-  					<input type="checkbox" name="internship" value="yes">Yes<br />
-			
-					<input type="checkbox" name="internship" value="no">No<br />
+					<p>Are you applying for an internship?</p>	
+
+                              <label class="checkbox">
+  					<input type="checkbox" name="internship" value="yes">Yes</label>
+			         
+                              <label class="checkbox">
+					<input type="checkbox" name="internship" value="no">No</label>
 		
 					<label for="for">First Name:</label>  
 					<input type="text" name="first" placeholder="first">
 					<div class="clear"></div>
+
 					<label for="last">Last Name:</label>  
 					<input type="text" name="last" placeholder="last">
 					<div class="clear"></div>
 			
-					<input type="radio" name="sex" value="male">Male<br />
+					<label class="radio inline">
+                              <input type="radio" name="sex" value="male">Male</label>
 			
-					<input type="radio" name="sex" value="female">Female<br />
+					<label class="radio inline">
+                              <input type="radio" name="sex" value="female">Female</label>
 			
 					<label for="phone">Phone:</label>
 					<input name="phone" type="tel" id="phone" placeholder="(XXX)XXX-XXXX" />
@@ -441,7 +448,7 @@
                     </fieldset>
 
 
-					<input type="submit" value="Submit">
+					<input class="btn btn-info" type="submit" value="Submit">
 		
 				 </fieldset>
 				</form>	
@@ -449,7 +456,7 @@
 				
 			</article>
 			
-			<aside>
+			<aside class="span3 well well-small sidebar-nav">
 				<!-- Well put sub-nav if applicable if not will put reg. global nav -->
                         <ul>
                               <li><a href="aboutus.html">About Us</a></li>
@@ -461,7 +468,7 @@
                         </ul>
 				
 			</aside>
-
+</div>
 			<footer>
 				<p>
 					Copyright &copy; 2005 | Nadic Engineering Services, Inc. | <a href="#">Site Map</a> | <a href="#">FTP access</a> | <a href="#">Employee Access</a>
