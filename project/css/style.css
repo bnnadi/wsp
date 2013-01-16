@@ -23,12 +23,30 @@ article, aside, details, figcaption, figure,
 footer, header, menu, nav, section {
 	display: block;
 }
+
 body {
 	line-height: 1;
-	padding-top: 70px;
+	padding-top: 50px;
+	background-image: url(../img/subtle_grunge.png);
 }
+
 ol, ul {
 	list-style: none;
 }
 
+.box {
+	border: 1px dashed #333;
+	background-color: #feffff;
+	margin-top: 12%;
+	width: auto;
+}
+
+.box article {
+	float: right;
+}
+
+.box aside {
+	float: left;
+
+}
 
