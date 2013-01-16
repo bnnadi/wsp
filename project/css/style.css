@@ -26,7 +26,7 @@ footer, header, menu, nav, section {
 
 body {
 	line-height: 1;
-	padding-top: 50px;
+	padding-top: 60px;
 	background-image: url(../img/subtle_grunge.png);
 }
 
@@ -39,14 +39,5 @@ ol, ul {
 	background-color: #feffff;
 	margin-top: 12%;
 	width: auto;
-}
-
-.box article {
-	float: right;
-}
-
-.box aside {
-	float: left;
-
 }
 
