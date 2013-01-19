@@ -24,7 +24,13 @@ ol, ul {
 
 .logo {
 	background-image: url(../img/new_logo.png);
+	height: 90px;
+	width: 300px;
 	display: block;
+	top: 0;
+	position: absolute;
+	z-index: 1031;
+	text-indent: -9999px;
 }
 
 header .logo-phone {
