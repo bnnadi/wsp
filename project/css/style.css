@@ -18,7 +18,7 @@ body {
 	background-image: url(../img/subtle_grunge.png);
 }
 
-body h3 {
+body h3, body h4 {
 	color: #122546;
 }
 
@@ -88,6 +88,7 @@ article .btn:hover {
    background: #354465;
    color: #feffff;
    }
+
 article .btn:active {
    border-top-color: #122546;
    background: #122546;
@@ -106,7 +107,7 @@ article p strong {
 }
 
 article h3 {
-	margin-left: -200px;
+	margin: 0 0 -20px -400px;
 }
 
 .box {
@@ -114,6 +115,10 @@ article h3 {
 	background-color: #feffff;
 	margin: 0 auto;
 	padding: 20px;
+}
+
+aside {
+	margin-top: 50px;
 }
 
 aside li a {
