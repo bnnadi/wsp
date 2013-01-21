@@ -14,8 +14,12 @@ article, aside, details, figcaption, figure, footer, header, menu, nav, section 
 
 body {
 	line-height: 1;
-	padding-top: 60px;
+	padding: 60px 0 0 10px;
 	background-image: url(../img/subtle_grunge.png);
+}
+
+body h3 {
+	color: #122546;
 }
 
 ol, ul {
@@ -40,7 +44,12 @@ header .logo-phone {
 	display: block;
 	text-indent: -9999px;
 }
+
 .nav li {
+	margin-top: 10px;
+}
+
+.nav li a {
 	text-align: center;
 }
 
@@ -48,18 +57,65 @@ header .logo-phone {
 	border-bottom: 3px solid #C1CEDE;
 }
 
-#well_color {
+#over-logo {
+	z-index: 1032;
+}
+
+article .btn {
+   border-top: 1px solid #122546;
+   background: #354465;
+   background: -webkit-gradient(linear, left top, left bottom, from(#122546), to(#354465));
+   background: -webkit-linear-gradient(top, #122546, #354465);
+   background: -moz-linear-gradient(top, #122546, #354465);
+   background: -ms-linear-gradient(top, #122546, #354465);
+   background: -o-linear-gradient(top, #122546, #354465);
+   padding: 8px 16px;
+   -webkit-border-radius: 8px;
+   -moz-border-radius: 8px;
+   border-radius: 8px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-size: 15px;
+   font-family: Helvetica, Arial, Sans-Serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+article .btn:hover {
+   border-top-color: #354465;
+   background: #354465;
+   color: #feffff;
+   }
+article .btn:active {
+   border-top-color: #122546;
+   background: #122546;
+   }
+
+#well_adjust {
 	background-color: #C1CEDE;
 }
 
-#over-logo {
-	z-index: 1032;
+p strong {
+	color: #feffff;
+}
+
+article p strong {
+	color: #354465;
+}
+
+article h3 {
+	margin-left: -200px;
 }
 
 .box {
 	border: 1px dashed #333;
 	background-color: #feffff;
-	margin-top: 12%;
-	width: auto;
+	margin: 0 auto;
+	padding: 20px;
 }
 
+aside li a {
+	color: #354465;
+}
