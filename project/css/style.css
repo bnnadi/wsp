@@ -76,6 +76,10 @@ article .well {
 	background-color: #C1CEDE;
 }
 
+article .well a{
+	color: #354465;
+}
+
 article .btn {
    border-top: 1px solid #122546;
    background: #354465;
