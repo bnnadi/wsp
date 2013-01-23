@@ -61,6 +61,21 @@ header .logo-phone {
 	z-index: 1032;
 }
 
+.box {
+	border: 1px dashed #333;
+	background-color: #feffff;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+article label {
+	color: #354465;
+}
+
+article .well {
+	background-color: #C1CEDE;
+}
+
 article .btn {
    border-top: 1px solid #122546;
    background: #354465;
@@ -105,25 +120,6 @@ article .btn:active {
 
 article p strong {
 	color: #354465;
-}
-
-article h3 {
-	margin: 0 0 -20px -400px;
-}
-
-.cta_adjust {
-	margin: 0 auto;
-}
-
-.box {
-	border: 1px dashed #333;
-	background-color: #feffff;
-	margin: 0 auto;
-	padding: 20px;
-}
-
-aside {
-	margin-top: 50px;
 }
 
 aside li a {

@@ -10,7 +10,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="css/style.css" />
 		<link rel="stylesheet" href="css/bootstrap.css" />
-		<link rel="stylesheet" href="js/bootstrap.js" />
 
 		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
 		<link rel="shortcut icon" type="image/png" href="img/icon.png" />		
@@ -99,7 +98,7 @@
 				<div class="box span11">
 					<article class="span8 pull-right">
 						
-						<h3>Employment</h3>
+						<h3 class="visible-phone visible-tablet">Employment</h3>
 						
 						<p>Nadic is a growing, consulting engineering firm and as such, we are always looking for professional and technical talent to add to our team.Nadic is an Equal Opportunity Employment (EOE) and Drug-Free Workplace firm.</p>
 
@@ -120,6 +119,7 @@
 					</article>
 					
 					<aside class="span3 pull-left">
+						<h3 class="hidden-phone hidden-tablet">Employment</h3>
 						<!-- Well put sub-nav if applicable if not will put reg. global nav -->
 						<ul>
 							<li><a href="aboutus.html">About Us</a></li>
@@ -139,5 +139,28 @@
 				</p>
 			</footer>
 		</div>
+
+		<script type="text/javascript" src="js/jquery.js"> 
+		</script>
+		<script type="text/javascript" src="js/bootstrap.js"> 
+		</script>
+
+		<!-- This for the extra stuff for my javascript -->
+		<script type="text/javascript" >
+			$(".collapse").collapse()
+
+			$(document).ready(function () {  
+            	$('.dropdown-toggle').dropdown();  
+        	});
+
+			$('.carousel').carousel({  
+					  interval: 2000 // in milliseconds  
+			}) 
+
+			$('#myCarousel').hover(function () {   
+				  $(this).carousel('pause')   
+			}         
+		</script>
+
 	</body>
 </html>

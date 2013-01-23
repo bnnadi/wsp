@@ -10,7 +10,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="css/style.css" />
 		<link rel="stylesheet" href="css/bootstrap.css" />
-		<link rel="stylesheet" href="js/bootstrap.js" />
 
 		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
 		<link rel="shortcut icon" type="image/png" href="img/icon.png" />
@@ -100,7 +99,7 @@
 					<article class="span8 pull-right">
 						<!-- Well put slideshow of pictures first, then the information but that solely depends on which page on -->
 						
-						<h3>Projects</h3>
+						<h3 class="visible-phone visible-tablet">Projects</h3>
 						
 						<p>Nadic has provided services on several projects ranging from single family residences to industrial and transportation complexes; We work with both public and private clients including:</p>
 
@@ -160,6 +159,7 @@
 					</article>
 					
 					<aside class="span3 pull-left">
+						<h3 class="hidden-phone hidden-tablet">Projects</h3>
 						<!-- Well put sub-nav if applicable if not will put reg. global nav -->
 						<ul>
 							<li><a href="aboutus.html">About Us</a></li>
@@ -181,5 +181,28 @@
 				</p>
 			</footer>
 		</div>
+
+		<script type="text/javascript" src="js/jquery.js"> 
+		</script>
+		<script type="text/javascript" src="js/bootstrap.js"> 
+		</script>
+
+		<!-- This for the extra stuff for my javascript -->
+		<script type="text/javascript" >
+			$(".collapse").collapse()
+
+			$(document).ready(function () {  
+            	$('.dropdown-toggle').dropdown();  
+        	});
+
+			$('.carousel').carousel({  
+					  interval: 2000 // in milliseconds  
+			}) 
+
+			$('#myCarousel').hover(function () {   
+				  $(this).carousel('pause')   
+			}         
+		</script>
+
 	</body>
 </html>

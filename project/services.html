@@ -10,7 +10,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="css/style.css" />
 		<link rel="stylesheet" href="css/bootstrap.css" />
-		<link rel="stylesheet" href="js/bootstrap.js" />
 
 		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
 		<link rel="shortcut icon" type="image/png" href="img/icon.png" />
@@ -98,7 +97,7 @@
 				<div class="box span11">			
 					<article class="span8 pull-right">
 						<!-- Well put slideshow of pictures first, then the information but that solely depends on which page on -->
-						<h3>Services</h3>
+						<h3 class="visible-phone visible-tablet">Services</h3>
 						
 						<p>Nadic was founded with a commitment to provide superior service to our clients. Our service areas include geo-technical, water resources, geo-environmental, and construction materials testing and inspection. Nadic's objective for each service area is to do our best to meet your goals. We accomplish all projects by understanding what is required, communicating with our clients, and being responsive to our client's needs. We bring the right experience and skill to every project. The experience of our staff allows us to present innovative, superior solutions to engineering and environmental problems. The result is a smoothly done job that is on time and within budget.</p>
 						
@@ -107,6 +106,7 @@
 					</article>
 				
 					<aside class="span3 pull-left">
+						<h3 class="hidden-phone hidden-tablet">Services</h3>
 						<!-- Well put sub-nav if applicable if not will put reg. global nav -->
 						<ul>
 							<li><a href="#">Geotechnical Services</a></li>
@@ -125,5 +125,28 @@
 				</p>
 			</footer>
 		</div>
+
+		<script type="text/javascript" src="js/jquery.js"> 
+		</script>
+		<script type="text/javascript" src="js/bootstrap.js"> 
+		</script>
+
+		<!-- This for the extra stuff for my javascript -->
+		<script type="text/javascript" >
+			$(".collapse").collapse()
+
+			$(document).ready(function () {  
+            	$('.dropdown-toggle').dropdown();  
+        	});
+
+			$('.carousel').carousel({  
+					  interval: 2000 // in milliseconds  
+			}) 
+
+			$('#myCarousel').hover(function () {   
+				  $(this).carousel('pause')   
+			}         
+		</script>
+
 	</body>
 </html>

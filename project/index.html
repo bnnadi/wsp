@@ -13,7 +13,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 		<link rel="stylesheet" href="css/style.css" />
-		<link rel="stylesheet" href="css/bootstrap-reponsive.css"/>
 		<link rel="stylesheet" href="css/bootstrap.css"/>
 
 		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
@@ -32,7 +31,7 @@
     		 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   			})();
 
-</script>
+		</script>
 	</head>
 
 	<body>
@@ -55,18 +54,18 @@
 					<div class="nav-collapse collapse">
 					<nav class="nav pull-right">
 					<ul class="nav">
-						<li class="dropdown"><a class="dropdown-toggle" id="dLabel" data-toggle="dropdown" role="button" data-target="#" href="aboutus.html" >About Us <b class="caret"></b></a>
+						<li class="dropdown"><a class="dropdown-toggle" id="dLabel" data-hover="dropdown" data-delay="1000" data-close-others="false"role="button" data-target="#" href="aboutus.html" >About Us <b class="caret"></b></a>
 							<ul class="dropdown-menu" aria-labelledby="dLabel">
-								<li><a href="#">Why Depend on Us</a></li>
+								<li><a href="aboutus.html">Why Depend on Us</a></li>
 								<li><a href="#">Our Philosphy</a></li>
 								<li><a href="#">Corporate Environment</a></li>
 							</ul>
 						</li>
 						<li class="divider-vertical"></li>
-						<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" role="button" 
+						<li class="dropdown"><a class="dropdown-toggle js-activated" data-hover="dropdown" data-delay="1000" data-close-others="false" role="button" 
 						data-target="#"	href="services.html" >Services <b class="caret"></b></a>
 							<ul class="dropdown-menu" aria-labelledby="dLabel">
-								<li><a href="#">Geotechnical Services</a></li>
+								<li><a href="services.html">Geotechnical Services</a></li>
 								<li><a href="#">Geoenvironmental Services</a></li>
 								<li><a href="#">Construction</a></li>
 								<li><a href="#">Water Resources</a></li>
@@ -95,8 +94,9 @@
 			</div>
 			</div>
 			<article>
-				<div class="container-fluid cta_adjust">
+				<div class="container-fluid">
 					 <div class="row-fluid">
+					 	<div class="cta_adjust">
 						<div class="pull-right span5">
 							
 						<div id="myCarousel" class="carousel slide">
@@ -122,12 +122,13 @@
 				<p>Nadic is prepared to respond to your needs in all phases of a project. Nadic is a solution oriented company. Our professional staff thrives on providing effective solutions to current environmental and civil problems. We are dedicated to meeting the most aggressive budget and scheduling deadlines. Our first priority is the needs of our clients</p>
 							</div>
 						</div>
-
+						</div>
 						</div>
 					</div>
 				</article>
 				<div class="container-fluid">
-				<aside class="row-fluid box">
+				<aside class="row-fluid">
+					<div class="box span11">
 					<div class="span4">
 						<h3>Nadic News</h3>
 						<ul>
@@ -146,7 +147,7 @@
 						<img src="img/mbe.png" class="img-polaroid"/>
 					</div>
 
-					<div class="span3">
+					<div class="span4">
 
 						<h3>Featured Projects</h3>
 						<ul>
@@ -156,7 +157,7 @@
 							<li><a href="projects.html">Contruction on the Sunbelt to be completed by year end.</a></li>
 						</ul>
 					</div>
-
+				</div>
 			</aside>
 		</div>
 			<footer>
@@ -167,15 +168,12 @@
 		</div>
 
 		<script type="text/javascript" src="js/jquery.js"> 
+		</script>		
+		<script type="text/javascript" src="js/bootstrap.js"> 
 		</script>
-		<script type="text/javascript" src="js/bootstrap-collapse.js"> 
-		</script>
-		<script type="text/javascript" src="js/bootstrap-dropdown.js"> 
-		</script>
-		<script type="text/javascript" src="js/bootstrap-carousel.js"> 
-		</script>
+		<script src="twitter-bootstrap-hover-dropdown.js"></script>
 
-		<!-- This for the extra stuff for my javascript 
+		<!-- This for the extra stuff for my javascript -->
 		<script type="text/javascript" >
 			$(".collapse").collapse()
 
@@ -183,14 +181,24 @@
             	$('.dropdown-toggle').dropdown();  
         	});
 
+        	$('.dropdown-toggle').dropdownHover(options);
+
 			$('.carousel').carousel({  
 					  interval: 2000 // in milliseconds  
 			}) 
 
 			$('#myCarousel').hover(function () {   
 				  $(this).carousel('pause')   
-			}         
-		</script>-->
+			} 
+			        
+		</script>
+
+		 <script>
+		    // very simple to use!
+		    $(document).ready(function() {
+		      $('.js-activated').dropdownHover();
+		    });
+		 </script>
 
 	</body>
 </html>
