@@ -27,7 +27,7 @@
     		 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   			})();
 
-</script>
+		</script>
 	</head>
 
 	<body>
@@ -50,7 +50,8 @@
 					<div class="nav-collapse collapse">
 					<nav class="nav pull-right">
 					<ul class="nav dropdown" role="navigation">
-						<li class="dropdown"><a class="dropdown-toggle active" id="dLabel" data-toggle="dropdown" role="button" data-target="#" href="aboutus.html" >About Us <b class="caret"></b></a>
+						<li class="dropdown"><a class="dropdown-toggle js-activated" data-hover="dropdown" data-delay="1000" data-close-others="false" role="button" 
+						data-target="#"	href="aboutus.html" >About Us</a>
 							<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
 								<li><a href="#">Why Depend on Us</a></li>
 								<li><a href="#">Our Philosphy</a></li>
@@ -58,8 +59,8 @@
 							</ul>
 						</li>
 						<li class="divider-vertical"></li>
-						<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" role="button" 
-						data-target="#"	href="services.html" >Services <b class="caret"></b></a>
+						<li class="dropdown"><a class="dropdown-toggle js-activated" data-hover="dropdown" data-delay="1000" data-close-others="false" role="button" 
+						data-target="#"	href="services.html" >Services</a>
 							<ul class="dropdown-menu">
 								<li><a href="#">Geotechnical Services</a></li>
 								<li><a href="#">Geoenvironmental Services</a></li>
@@ -492,19 +493,37 @@
 			</footer>
 		</div>
 
-            <script type="text/javascript" src="js/jquery.js"> 
-            </script>
-            <script type="text/javascript" src="js/bootstrap.js"> 
-            </script>
+		<script type="text/javascript" src="js/jquery.js"> 
+		</script>
+		<script type="text/javascript" src="js/bootstrap.js"> 
+		</script>
+		<script type="text/javascript" src="js/twitter-bootstrap-hover-dropdown.js"></script>
 
-            <!-- This for the extra stuff for my javascript -->
-            <script type="text/javascript" >
-                  $(".collapse").collapse()
+		<!-- This for the extra stuff for my javascript -->
+		<script type="text/javascript" >
+			$(".collapse").collapse()
 
-                  $(document).ready(function () {  
-                  $('.dropdown-toggle').dropdown();  
-           			});        
-            </script>
+			$(document).ready(function () {  
+            	$('.dropdown-toggle').dropdown();  
+        	});
+
+        	$('.dropdown-toggle').dropdownHover(options);
+
+			$('.carousel').carousel({  
+					  interval: 2000 // in milliseconds  
+			}) 
+
+			$('#myCarousel').hover(function () {   
+				  $(this).carousel('pause')   
+			} 
+			        
+		</script>
+		<script>
+		    // very simple to use!
+		    $(document).ready(function() {
+		      $('.js-activated').dropdownHover();
+		    });
+		 </script>
 
 	</body>
 </html>

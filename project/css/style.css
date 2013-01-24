@@ -130,7 +130,13 @@ aside li a {
 	color: #354465;
 }
 
+.bing_map{
+	display: block;
+}
+
 footer {
 	text-align: center;
 }
+
+@media (max-width: 480px) and (max-width: )
 

@@ -16,31 +16,24 @@
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 		<!-- this is for google Analyics to track the website -->
 		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-37491714-1']);
+			_gaq.push(['_trackPageview']);
 
-  			var _gaq = _gaq || [];
- 			 _gaq.push(['_setAccount', 'UA-37491714-1']);
-  			_gaq.push(['_trackPageview']);
+			(function() {
+				var ga = document.createElement('script');
+				ga.type = 'text/javascript';
+				ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(ga, s);
+			})();
 
-  			(function() {
-   			 var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-   			 ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    		 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  			})();
+		</script>
 
-            <script type="text/javascript" src="http://ecn.dev.virtualearth.net/MapControl/mapcontrol.ashx?v=6.3c">
-            </script>
-            <script type="text/javascript">
-                var map = null;
-                function GetMap() {
-                    map = new VEMap('myMap');            
-                    map.LoadMap();
-                }
-            </script>
-
-</script>
 	</head>
 
-	<body onload="GetMap();">
+	<body>
             <div>
 			<header class="pull-left">
 				<a class="brand hidden-phone hidden-tablet logo" href="index.html">Nadic Engineering Services</a>
@@ -59,7 +52,8 @@
 					<div class="nav-collapse collapse">
 					<nav class="nav pull-right">
 					<ul class="nav dropdown" role="navigation">
-						<li class="dropdown"><a class="dropdown-toggle active" id="dLabel" data-toggle="dropdown" role="button" data-target="#" href="aboutus.html" >About Us <b class="caret"></b></a>
+						<li class="dropdown"><a class="dropdown-toggle js-activated" data-hover="dropdown" data-delay="1000" data-close-others="false" role="button" 
+						data-target="#"	href="aboutus.html" >About Us</a>
 							<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
 								<li><a href="#">Why Depend on Us</a></li>
 								<li><a href="#">Our Philosphy</a></li>
@@ -67,8 +61,8 @@
 							</ul>
 						</li>
 						<li class="divider-vertical"></li>
-						<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" role="button" 
-						data-target="#"	href="services.html" >Services <b class="caret"></b></a>
+						<li class="dropdown"><a class="dropdown-toggle js-activated" data-hover="dropdown" data-delay="1000" data-close-others="false" role="button" 
+						data-target="#"	href="services.html" >Services</a>
 							<ul class="dropdown-menu">
 								<li><a href="#">Geotechnical Services</a></li>
 								<li><a href="#">Geoenvironmental Services</a></li>
@@ -156,7 +150,7 @@
 
 				                  <div class="well pull-right">
 				                  	
-				                  	<a href="http://www.bing.com/maps/default.aspx?q=601+North+Hart+Boulevard+Orlando%2c+FL+32818&mkt=en&FORM=HDRSC4"><img src="img/nadic-bing_map.png" /></a>
+				                  	<a class="bing_map" href="http://www.bing.com/maps/default.aspx?q=601+North+Hart+Boulevard+Orlando%2c+FL+32818&mkt=en&FORM=HDRSC4"><img src="img/nadic-bing_map.png" alt="location map"/></a>
 				                  	
 		
 				                    <address>
@@ -200,6 +194,7 @@
 		</script>
 		<script type="text/javascript" src="js/bootstrap.js"> 
 		</script>
+		<script type="text/javascript" src="js/twitter-bootstrap-hover-dropdown.js"></script>
 
 		<!-- This for the extra stuff for my javascript -->
 		<script type="text/javascript" >
@@ -207,8 +202,24 @@
 
 			$(document).ready(function () {  
             	$('.dropdown-toggle').dropdown();  
-        	});         
-		</script>
+        	});
 
+        	$('.dropdown-toggle').dropdownHover(options);
+
+			$('.carousel').carousel({  
+					  interval: 2000 // in milliseconds  
+			}) 
+
+			$('#myCarousel').hover(function () {   
+				  $(this).carousel('pause')   
+			} 
+			        
+		</script>
+		<script>
+		    // very simple to use!
+		    $(document).ready(function() {
+		      $('.js-activated').dropdownHover();
+		    });
+		 </script>
 	</body>
 </html>

@@ -51,18 +51,19 @@
 
 					<div class="nav-collapse collapse">
 					<nav class="nav pull-right">
-					<ul class="nav dropdown" role="navigation">
-						<li class="dropdown" id="selected"><a class="dropdown-toggle active" id="dLabel" data-toggle="dropdown" role="button" data-target="#" href="aboutus.html" >About Us <b class="caret"></b></a>
-							<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+					<ul class="nav">
+						<li class="dropdown" id="selected"><a class="dropdown-toggle js-activated" data-hover="dropdown" data-delay="1000" data-close-others="false" role="button" 
+						data-target="#"	href="aboutus.html" >About Us</a>
+							<ul class="dropdown-menu" aria-labelledby="dLabel">
 								<li><a href="#">Why Depend on Us</a></li>
 								<li><a href="#">Our Philosphy</a></li>
 								<li><a href="#">Corporate Environment</a></li>
 							</ul>
 						</li>
 						<li class="divider-vertical"></li>
-						<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" role="button" 
-						data-target="#"	href="services.html" >Services <b class="caret"></b></a>
-							<ul class="dropdown-menu">
+						<li class="dropdown"><a class="dropdown-toggle js-activated" data-hover="dropdown" data-delay="1000" data-close-others="false" role="button" 
+						data-target="#"	href="services.html" >Services</a>
+							<ul class="dropdown-menu" aria-labelledby="dLabel">
 								<li><a href="#">Geotechnical Services</a></li>
 								<li><a href="#">Geoenvironmental Services</a></li>
 								<li><a href="#">Construction</a></li>
@@ -95,27 +96,9 @@
 			<div class="row-fluid">
 				<div class="offset2" id="over_logo">
 					<!-- Well put slideshow of pictures first, then the information but that solely depends on which page on -->
-					<img src="img/Design_Build.png" />
+					<img src="img/Design_Build.png" alt="SR408/417 interchange" />
 				</div>
 				<div class="box span11">
-					<article class="span8 pull-right">
-						<h3 class="visible-phone visible-tablet">About Us</h3>
-
-						<p>
-							<strong>NADIC ENGINEERING SERVICES, INC. (NES)</strong> is an engineering firm providing geotechnical, water resources, geo-environmental, and construction materials engineering, testing, quality control and assurance services.
-						</p>
-						<p>
-							Nadic is committed to excellence. We work with clients to provide effective solutions to current environmental and civil engineering problems, in addition to anticipating and preventing future issues of concern. We believe that engineering and technical services must be directed by professionals with significant experience in the disciplines relevant to the client’s needs. Our main objective is to meet your goals. Our mission is to provide reliable, high-quality, cost-saving services to you.
-						</p>
-
-						<p><i>
-							Our commitment to excellence is not a cliché. It is what makes Nadic different.
-						</i></p>
-
-						<p>Nadic Engineering has established strong policies on quality, employee workmanship and error prevention for each project. We believe that engineering and technical services must be directed by professionals with significant experience in the disciplines relevant to the client's needs. The expertise of our staff allows us to present innovative and superior solutions. No matter the size of the project or stage of development, Nadic offers effective and practical engineering solutions to difficult subsurface conditions.</p>
-						<p> We are always committed to our clients by providing our expertise from the early stages of the project through construction. Our main objective is to meet your goals. Our mission is to provide you with reliable, high-quality, cost-saving services.</p>
-
-					</article>
 
 					<aside class="span3 pull-left">
 						<h3 class="hidden-phone hidden-tablet">About Us</h3>
@@ -136,6 +119,27 @@
 						</ul>
 
 					</aside>
+
+					<article class="span8 pull-right">
+						<h3 class="visible-phone visible-tablet">About Us</h3>
+
+						<p>
+							<strong>NADIC ENGINEERING SERVICES, INC. (NES)</strong> is an engineering firm providing geotechnical, water resources, geo-environmental, and construction materials engineering, testing, quality control and assurance services.
+						</p>
+						<p>
+							Nadic is committed to excellence. We work with clients to provide effective solutions to current environmental and civil engineering problems, in addition to anticipating and preventing future issues of concern. We believe that engineering and technical services must be directed by professionals with significant experience in the disciplines relevant to the client’s needs. Our main objective is to meet your goals. Our mission is to provide reliable, high-quality, cost-saving services to you.
+						</p>
+
+						<p><i>
+							Our commitment to excellence is not a cliché. It is what makes Nadic different.
+						</i></p>
+
+						<p>Nadic Engineering has established strong policies on quality, employee workmanship and error prevention for each project. We believe that engineering and technical services must be directed by professionals with significant experience in the disciplines relevant to the client's needs. The expertise of our staff allows us to present innovative and superior solutions. No matter the size of the project or stage of development, Nadic offers effective and practical engineering solutions to difficult subsurface conditions.</p>
+						<p> We are always committed to our clients by providing our expertise from the early stages of the project through construction. Our main objective is to meet your goals. Our mission is to provide you with reliable, high-quality, cost-saving services.</p>
+
+					</article>
+
+
 				</div>
 			</div>
 
@@ -150,6 +154,7 @@
 		</script>
 		<script type="text/javascript" src="js/bootstrap.js"> 
 		</script>
+		<script type="text/javascript" src="js/twitter-bootstrap-hover-dropdown.js"></script>
 
 		<!-- This for the extra stuff for my javascript -->
 		<script type="text/javascript" >
@@ -157,8 +162,25 @@
 
 			$(document).ready(function () {  
             	$('.dropdown-toggle').dropdown();  
-        	});        
+        	});
+
+        	$('.dropdown-toggle').dropdownHover(options);
+
+			$('.carousel').carousel({  
+					  interval: 2000 // in milliseconds  
+			}) 
+
+			$('#myCarousel').hover(function () {   
+				  $(this).carousel('pause')   
+			} 
+			        
 		</script>
+		<script>
+		    // very simple to use!
+		    $(document).ready(function() {
+		      $('.js-activated').dropdownHover();
+		    });
+		 </script>
 		
 	</body>
 </html>
