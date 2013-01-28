@@ -68,7 +68,9 @@ header .logo-phone {
 	padding: 20px;
 }
 
-
+.cta_adjust {
+	margin-right: 25%;
+}
 
 article label {
 	color: #354465;
@@ -145,5 +147,25 @@ footer {
   body {
 
   }
+}
+
+@media (min-width: 481px) and (max-width: 800px) {
+		form {
+			margin: 0 auto;
+		}
+
+		.box aside .mobile {
+			margin: 0 auto;
+	}
+}
+
+@media (max-width: 480px) {
+ 	.box {
+  		border: none;
+		background-color: transparent;
+		padding: 0;
+  	}
+
+}
 
 
