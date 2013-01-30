@@ -57,8 +57,17 @@ header .logo-phone {
 	border-bottom: 3px solid #C1CEDE;
 }
 
-#over-logo {
-	z-index: 1032;
+.nav .dropdown-menu a {
+	text-align: left;
+}
+
+.nav .dropdown-menu a:hover {
+	background-color: #354465;
+}
+
+#over_logo {
+	margin-top: -8px;
+	margin-right: 25%;
 }
 
 .box {
@@ -66,10 +75,6 @@ header .logo-phone {
 	background-color: #feffff;
 	margin: 0 auto;
 	padding: 20px;
-}
-
-.cta_adjust {
-	margin-right: 25%;
 }
 
 article label {
@@ -120,6 +125,8 @@ article .btn:active {
 
 #well_adjust {
 	background-color: #C1CEDE;
+	font-size: 1.4em;
+	padding: 5%;
 }
 
 #well_adjust p strong {
@@ -164,6 +171,10 @@ footer {
   		border: none;
 		background-color: transparent;
 		padding: 0;
+  	}
+
+  	.box form {
+  		width: 100%;
   	}
 
 }
